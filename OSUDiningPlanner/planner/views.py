@@ -11,7 +11,7 @@ from django.views.generic.edit import CreateView
 from .models import Location
 
 def get_dining_halls(request):
-	halls = {'scott', 'curl'}
+	halls = {'scott', 'curl', 'marketplace', 'terrabyte cafe'}
 	print halls
 	if request.method == 'POST':
 		form = DiningHallForm(request.POST)
