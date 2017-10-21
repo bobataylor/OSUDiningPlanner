@@ -7,6 +7,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .forms import DiningHallForm
+from django.views.generic.edit import CreateView
+from .models import Location
 
 def get_dining_halls(request):
 	if request.method == 'POST':
@@ -15,6 +17,7 @@ def get_dining_halls(request):
 		if form.is_valid():
 			diningHalls = form.POST.getlist('my_hall')
 	return render(request, 'planner/chooseDiningHalls.html')
+
 
 def index(request):
 	#context = {}

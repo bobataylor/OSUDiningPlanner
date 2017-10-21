@@ -1,8 +1,7 @@
-from django import forms
+from django.forms import ModelForm
 from .models import Location
 
-class DiningHallForm(forms.Form):
-	diningHalls = forms.ModelMultipleChoiceField(
-		queryset = ['hello', 'world'],
-		widget = forms.CheckboxSelectMultiple,
-	)
+class DiningHallForm(ModelForm):
+	class Meta:
+		model = Location
+		fields = ['location_name',]
