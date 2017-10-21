@@ -2,11 +2,18 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
-# Create your views here.
+from django.views import generic
 from django.http import HttpResponse
 from django.template import loader
 
+from .models import Food, Location
+
 def index(request):
-	#context = {}
 	return render(request, 'planner/index.html')
+
+def results(request):
+	return render(request, 'planner/results.html')
+
+#class ResultsView(generic.DetailView):
+#	model = Food
+#	template_name = 'planner/results.html'
