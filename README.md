@@ -1,4 +1,4 @@
-###OSU Dining Planner
+### OSU Dining Planner
 
 By Nishad Prabhu, Iman Qamar, Danny Aromando, Cameron Taylor
 
