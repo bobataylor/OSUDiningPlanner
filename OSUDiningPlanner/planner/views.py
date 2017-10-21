@@ -2,9 +2,16 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
-# Create your views here.
+from django.views import generic
 from django.http import HttpResponse
+from django.template import loader
+
+from .models import Food, Location
 
 def index(request):
-	return HttpResponse("Welcome to the planner!")
+	return render(request, 'planner/index.html')
+
+def results(request):
+	food_list = [{'name' : 'Pizza'},{'name' : 'ice cream'}]#GET FOOD LIST PUT IT HERE STOOPID
+	print(food_list)
+	return render(request, 'planner/results.html', {'food_list' : food_list})
