@@ -1,6 +1,55 @@
 <h1>Here's you bloody nutrition info</h1>
-<ul>
-{% for meal in food_list %}
-	<li>{{ meal.name }}</li>
+
+<table border=1px>
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Portion size</th>
+		<th>Course</th>
+		<th>Ingredients</th>
+		<th>Requirement</th>
+		<th>Allergen</th>
+		<th>Calories</th>
+		<th>Total fat</th>
+		<th>Saturated fat</th>
+		<th>Trans fat</th>
+		<th>Cholestrol</th>
+		<th>Sodium</th>
+		<th>Total Carbs</th>
+		<th>Fiber</th>
+		<th>Sugar</th>
+		<th>Protein</th>
+		<th>Vitamin A</th>
+		<th>Vitamin C</th>
+		<th>Calcium</th>
+		<th>Iron</th>
+		<th>Location</th>
+	</tr>
+	{% for meal in food_list %}
+	<tr>
+		<td>{{ meal.name }}</td>
+		<td>${{ meal.price }}</td>
+		<td>{{ meal.portion_size }}</td>
+		<td>{{ meal.course }}</td>
+		<td><!--{{ meal.ingredients }}--></td>
+		<td>{{ meal.requirement }}</td>
+		<td>{{ meal.allergen }}</td>
+		<td>{{ meal.calories }}</td>
+		<td>{{ meal.total_fat }}</td>
+		<td>{{ meal.saturated_fat }}</td>
+		<td>{{ meal.trans_fat }}</td>
+		<td>{{ meal.cholestrol }}</td>
+		<td>{{ meal.sodium }}</td>
+		<td>{{ meal.total_Carbs }}</td>
+		<td>{{ meal.fiber }}</td>
+		<td>{{ meal.sugar }}</td>
+		<td>{{ meal.protein }}</td>
+		<td>{{ meal.vitamin_a }}</td>
+		<td>{{ meal.vitamin_c }}</td>
+		<td>{{ meal.calcium }}</td>
+		<td>{{ meal.iron }}</td>
+		<td>{{ meal.location }}</td>
+	</tr>
 {% endfor %}
-</ul>
+	</table>
+</table>
