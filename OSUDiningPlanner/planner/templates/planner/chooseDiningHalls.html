@@ -1,0 +1,12 @@
+<h1>Dining Halls</h1>
+
+<hr/>
+
+<p> Select your dining halls. </p>
+
+<form action="" method="post">
+	{% for hall in Location.all %}
+		<input type="checkbox" value="{{hall.location_name}}" name="my_hall">
+		{{hall.location_name}}
+	{% endfor %}
+</form>	
