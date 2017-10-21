@@ -11,12 +11,14 @@ from django.views.generic.edit import CreateView
 from .models import Location
 
 def get_dining_halls(request):
+	halls = {'scott', 'curl'}
+	print halls
 	if request.method == 'POST':
 		form = DiningHallForm(request.POST)
 
 		if form.is_valid():
 			diningHalls = form.POST.getlist('my_hall')
-	return render(request, 'planner/chooseDiningHalls.html')
+	return render(request, 'planner/chooseDiningHalls.html', {"hallList" : halls})
 
 
 def index(request):

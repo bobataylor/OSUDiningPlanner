@@ -4,16 +4,16 @@
 
 <p> Select your dining halls. </p>
 
-<!-- <form action="" method="post">
-	{% for hall in Location.all %}
+<form action="" method="post">
+	{% for hall in hallList %}
 		<input type="checkbox" value="{{hall.location_name}}" name="my_hall">
+		<label="{{hall}}">
 		{{hall.location_name}}
 	{% endfor %}
-</form>	 -->
-
-<form action="" method="post">
+</form>
+<!-- <form action="" method="post">
 	<input type="checkbox" value="dining" name="dining">
 
 	<input type="submit" name="Sumbit"/>
 
-</form>	
+</form>	 -->
