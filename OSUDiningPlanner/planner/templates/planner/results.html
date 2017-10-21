@@ -1,7 +1,7 @@
 <h1>Here's you bloody nutrition info</h1>
 <ul>
-{ food = {apple ,tomato, pear, poopsak} }
-{% for meal in food %}
-	<li>{ meal }</li>
+{{ food_list }}
+{% for x in food_list %}
+	<li>{{ food_list.name }}</li>
 {% endfor %}
 </ul>

@@ -12,8 +12,6 @@ def index(request):
 	return render(request, 'planner/index.html')
 
 def results(request):
-	return render(request, 'planner/results.html')
-
-#class ResultsView(generic.DetailView):
-#	model = Food
-#	template_name = 'planner/results.html'
+	food_list = {'name2' : 'ice cream','name' : 'pizza'}
+	print(food_list)
+	return render(request, 'planner/results.html', {'food_list' : food_list})
