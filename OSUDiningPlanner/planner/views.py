@@ -12,6 +12,6 @@ def index(request):
 	return render(request, 'planner/index.html')
 
 def results(request):
-	food_list = {'name2' : 'ice cream','name' : 'pizza'}
+	food_list = [{'name' : 'Pizza'},{'name' : 'ice cream'}]#GET FOOD LIST PUT IT HERE STOOPID
 	print(food_list)
 	return render(request, 'planner/results.html', {'food_list' : food_list})
