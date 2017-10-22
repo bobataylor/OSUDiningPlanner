@@ -1,0 +1,13 @@
+<h1>Dining Halls</h1>
+
+<hr/>
+
+<p> Select your dining halls. </p>
+
+<form action="" method="post">
+	{% csrf_token %}
+	{% for hall in hallList %}
+		<input type="checkbox" value="{{hall.location_name}}" name="my_hall"> {{hall}} <br/>
+	{% endfor %}
+</form>
+<input type="submit" value="Submit"/>
